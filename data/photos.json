@@ -1,4 +1,6 @@
 {
-    "photo": "",
-    "description": ""
+    "photo": {
+        "image": "",
+        "description": "Formatura:)"
+    }
 }
