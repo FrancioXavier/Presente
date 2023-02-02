@@ -9,7 +9,7 @@ async function fetchProfileData(){
 
     const photoData = await fetchProfileData();
     const photo = document.getElementById('photos');
-    const teste = photoData.content.map(photo => {
+    photo.innerHTML = photoData.content.map(photo => {
         return `
         <li class="item">
             <div>
@@ -19,6 +19,5 @@ async function fetchProfileData(){
             </div>
         </li>
     
-        `}).join('');
-    photo.innerHTML = teste;
+        `}).join('');;
 })()
