@@ -1,16 +1,56 @@
-* {
-  box-sizing: border-box;
+/* PARTICLE BACKGROUND */
+.snow-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: fit-content;
+  pointer-events: none;
 }
 
-body {
-  font-family: 'Poor Story', cursive;
-  background: #bdffbd;
+.snowflake {
+  position: fixed;
+  background-color: #6bf0ff;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
 }
 
+@keyframes fall {
+  0% {
+      opacity: 0;
+      transform: translateY(0);
+  }
+  10% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0.5;
+      transform: translateY(100vh);
+  }
+}
+
+@keyframes diagonal-fall {
+  0% {
+      opacity: 0;
+      transform: translate(0, 0);
+  }
+  10% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0.25;
+      transform: translate(10vw, 100vh);
+  }
+}
+/*POLAROID */
 .wrapper {
   width: 100%;
   padding: 0 2rem;
   text-align: center;
+  
+  z-index: 100000000;
 }
 .polaroid {
   background: #fff;
